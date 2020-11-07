@@ -14,8 +14,6 @@
     <div class="py-5 text-center">
         <h2>Checkout</h2>
     </div>
-
-    {{ if eq .Status ""}}
         <form action="/process" method="post">
             <div class="row">
                 <div class="col-md-4 order-md-2 mb-4">
@@ -30,13 +28,11 @@
                             </div>
                             <span class="text-muted">R$ 100,00</span>
                         </li>
-
                         <li class="list-group-item d-flex justify-content-between">
                             <span>Total</span>
                             <strong>R$ 100,00</strong>
                         </li>
                     </ul>
-
                     <div class="input-group">
                         <input type="text" class="form-control" name="coupon" placeholder="Cupom">
                     </div>
@@ -53,12 +49,8 @@
                             <input type="text" class="form-control" id="email" placeholder="" value="">
                         </div>
                     </div>
-
                     <hr class="mb-4">
-
                     <h4 class="mb-3">Pagamento</h4>
-
-
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="cc-name">Nome no cartão</label>
@@ -73,7 +65,6 @@
                         <div class="col-md-3 mb-3">
                             <label for="cc-expiration">Expiração</label>
                             <input type="text" class="form-control" id="cc-expiration" placeholder="">
-
                         </div>
                         <div class="col-md-3 mb-3">
                             <label for="cc-cvv">CVV</label>
@@ -85,14 +76,9 @@
                 </div>
             </div>
         </form>
-    {{ else}}
-        <h4>Resultado da operação: {{ .Status }}</h4>
-    {{end}}
-
     <footer class="my-5 pt-5 text-muted text-center text-small">
         <p class="mb-1">&copy; AvançaDev - 2020</p>
     </footer>
-
 </div>
 </body>
 </html>
